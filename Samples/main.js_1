@@ -1,0 +1,22 @@
+/*
+
+/*
+    Pakeisti tekstini turini h1 elemente i "Labas vakaras!"
+
+*/
+// DOM - document object module
+const h1DOM = document.querySelector('h1');
+
+h1DOM.innerText = 'Labas vakaras!';
+
+/*
+Jeigu jusu vardo raide nuo A iki P: suratsi paragrafa ir pakeisti teksta i "Siandien grazus oras!"
+
+jeigu jusu vardo raide nuo R iki Z:
+surasti nuoroda ir pakeisti teksta i "Surask mane!"
+*/
+const pDOM = document.querySelector('p');
+pDOM.innerText = 'Siandien grazus oras!';
+
+const aDOM = document.querySelector('a');
+aDOM.innerText = 'Spausk Mane!';

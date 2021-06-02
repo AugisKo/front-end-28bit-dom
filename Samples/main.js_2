@@ -1,0 +1,26 @@
+/* 
+surasti visus ingradientus ir ju pavadinimus atspausdinti i konsole
+*/
+
+const liDOM = document.querySelectorAll('li');
+console.log(liDOM);
+for (let i = 0; i < liDOM.length; i++) {
+  const ingredientas = liDOM[i].innerText;
+  console.log(ingredientas);
+}
+
+/* 
+Visu ingredientu pavadinimai turi buti didziosiomis raidemis ir sudeti i array.
+
+Isspausdinti gauta array i console.
+
+*/
+
+let ingrArray = [];
+for (let i = 0; i < liDOM.length; i++) {
+  const ingredientas = liDOM[i].innerText;
+  var ingredientasCap =
+    ingredientas.charAt(0).toUpperCase() + ingredientas.slice(1);
+  ingrArray.push(ingredientasCap);
+}
+console.log(ingrArray);

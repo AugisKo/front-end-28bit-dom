@@ -1,0 +1,17 @@
+/*
+Surasti h1 (antraste)
+Perrasyti H1 elemento teksta i "Zuikio darzas"
+*/
+
+const h1DOM = document.querySelector('h1');
+h1DOM.innerText = 'Zuikio darzas';
+
+/* 
+
+Susirasti visus ingredientus ir kiekvienos darzoves teksta pakeisti i "Israuta darzove"
+*/
+
+const liDOM = document.querySelectorAll('li');
+for (let i = 0; i < liDOM.length; i++) {
+  liDOM[i].innerText = 'Israuta darzove';
+}

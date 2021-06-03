@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <h1>Te prasideda žaidynės!</h1>
+
     <form>
         <button class="reset" type="button">C</button>
         <button class="minus" type="button">-</button>

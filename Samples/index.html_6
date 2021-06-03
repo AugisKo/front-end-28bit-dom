@@ -10,12 +10,16 @@
 </head>
 
 <body>
-
-    <form>
-        <button class="minus" type="button">-</button>
-        <div class="number">0</div>
-        <button class="plus" type="button">+</button>
-    </form>
+    <header>
+        <img class="logo" src="#" alt="Logo">
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact us</a>
+        </nav>
+        <div class="hamburger">Ham</div>
+    </header>
 
     <script src="./js/main.js" type="module" defer></script>
 </body>

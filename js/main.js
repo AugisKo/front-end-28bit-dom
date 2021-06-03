@@ -1,12 +1,11 @@
-const logoDOM = document.querySelector('.logo');
-const hamburgerDOM = document.querySelector('.hamburger');
-const navDOM = document.querySelector('nav');
+let rezultats = 0;
 
-console.log(logoDOM);
-console.log(hamburgerDOM);
-console.log(navDOM);
+const minusDOM = document.querySelector('.minus');
+const plusDOM = document.querySelector('.plus');
+const numberDOM = document.querySelector('.number');
 
-hamburgerDOM.addEventListener('click', () => {
-  logoDOM.classList.toggle('big');
-  navDOM.classList.toggle('visible');
-});
+minusDOM.addEventListener('click', () => {
+    rezultatas = rezultatas - 1;
+    console.log(rezultatas);
+ numberDOM.innerText = rezultatas}
+

@@ -9,8 +9,8 @@ const ulDOM = document.querySelector('ul');
 const h1 = h1DOM.innerText;
 const h1a = 'Žaidimas progrese';
 const ul = ulDOM.innerHTML;
-const ulMin = `<li>Paspaudei minusa ir dabartinis rezultatas yra ${numberDOM.innerText}.</li>`;
-const ulPlius = `<li>Paspaudei pliusa ir dabartinis rezultatas yra ${numberDOM.innerText}.</li>`;
+const ulMin = `<li>Paspaudei minusa ir dabartinis rezultatas yra ${rezultatas}.</li>`;
+const ulPlius = `<li>Paspaudei pliusa ir dabartinis rezultatas yra ${rezultatas}.</li>`;
 
 ulDOM.innerHTML = `<li>Tu pasileidai zaidima - sekmes!</li>`;
 

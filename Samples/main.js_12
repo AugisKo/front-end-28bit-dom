@@ -23,23 +23,12 @@ buttonDOM.addEventListener('click', (event) => {
       }
     return 'nepasirinko';
   }
-  console.log(gerimasChecked(gerimaiDOM));
-  let kreipinys = '';
-  if (customerDOM.value === '') {
-    kreipinys = 'Neprisistatęs užsakovas';
-  } else {
-    kreipinys = customerDOM.value;
-  }
-  let gerimas = '';
-  if (gerimasChecked(gerimaiDOM) === 'nepasirinko') {
-    gerimas = ' ir neužsisakė gėrimą.';
-  } else {
-    gerimas = ` ir užsisakė ${gerimasChecked(gerimaiDOM)}.`;
-  }
-  orderDOM.innerText =
-    kreipinys +
-    `, ${menuChecked(sriubaDOM)} sriubos, ${menuChecked(
-      patiekalasDOM
-    )} pagrindinio patiekalo, ${menuChecked(desertasDOM)} deserto` +
-    gerimas;
+
+  orderDOM.innerText = `Uzsakovas vardu ${customerDOM.value}, ${menuChecked(
+    sriubaDOM
+  )} sriubos, ${menuChecked(
+    patiekalasDOM
+  )} pagrindinio patiekalo, ${menuChecked(
+    desertasDOM
+  )} deserto ir ${gerimasChecked(gerimaiDOM)} yra pasirinktas gerymas.`;
 });

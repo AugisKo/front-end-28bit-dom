@@ -23,16 +23,16 @@ buttonDOM.addEventListener('click', (event) => {
       }
     return 'nepasirinko';
   }
-  console.log(gerimasChecked(gerimaiDOM));
+
   let kreipinys = '';
   if (customerDOM.value === '') {
     kreipinys = 'Neprisistatęs užsakovas';
   } else {
-    kreipinys = customerDOM.value;
+    kreipinys = customerDOM.value.trim();
   }
   let gerimas = '';
   if (gerimasChecked(gerimaiDOM) === 'nepasirinko') {
-    gerimas = ' ir neužsisakė gėrimą.';
+    gerimas = ' ir neužsisakė jokio gėrimo.';
   } else {
     gerimas = ` ir užsisakė ${gerimasChecked(gerimaiDOM)}.`;
   }

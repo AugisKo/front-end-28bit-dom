@@ -1,0 +1,25 @@
+const lentaDOM = document.querySelector('.lenta');
+const namuRezultatasDOM = lentaDOM.querySelector('[data-komanda="namu"]');
+const sveciuRezultatasDOM = lentaDOM.querySelector('[data-komanda="sveciu"]');
+const aiksteleDOM = document.querySelector('.aikstele');
+const namuKomandDOM = aiksteleDOM.querySelector('[data-komanda="namu"]');
+const sveciuKomandaDOM = aiksteleDOM.querySelector('[data-komanda="sveciu"]');
+const taskaiNamuDOM = namuKomandDOM.querySelectorAll('button');
+const taskaiSveciuDOM = sveciuKomandaDOM.querySelectorAll('button');
+
+console.log(taskaiSveciuDOM);
+
+let namuKomandosTaskai = 0;
+let sveciuKomandosTaskai = 0;
+
+for (let i = 0; i < 3; i++) {
+  taskaiNamuDOM[i].addEventListener('click', () => {
+    namuKomandosTaskai += i + 1;
+    namuRezultatasDOM.innerText = namuKomandosTaskai;
+  });
+
+  taskaiSveciuDOM[i].addEventListener('click', () => {
+    sveciuKomandosTaskai += i + 1;
+    sveciuRezultatasDOM.innerText = sveciuKomandosTaskai;
+  });
+}

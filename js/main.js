@@ -1,27 +1,31 @@
-function generuotiSocials(selector, array) {
-  if (selector === '' || typeof selector !== 'string') {
-    console.error('ERROR: Selectorius turi buti tekstas ir ne tuscias');
-    return false;
-  }
+const optionDOM = document.querySelector('.option');
+const buttonDOM = document.querySelector('button');
+const inputDOM = document.getElementById('board');
+const boardDOM = document.querySelector('.board');
 
-  if (!Array.isArray(array) || array.length === 0) {
-    console.error('ERROR: Sarasas negali buti tuscias');
-    return false;
-  }
+buttonDOM.addEventListener('click', (e) => {
+  e.preventDefault();
+  const n = parseInt(inputDOM.value);
+  optionDOM.textContent = `${n}x${n}`;
+  renderBoard(boardDOM, n);
+});
 
-  const selectorDOM = document.querySelector(selector);
-  console.log(selectorDOM);
+function renderBoard(DOMelement, size) {
+  const elementSize = 100 / size;
+  // const cellHTML = `<div class="cell" style="width: ${elementSize}%;"></div>`.repeat(size);
+  // const rowHTML = `<div class="row" style="height: ${elementSize}%;">${cellHTML}</div>`;
+  // DOMelement.innerHTML = rowHTML.repeat(size);
 
+  let cellHTML = '';
   let HTML = '';
-  for (let i = 0; i < array.length; i++) {
-    console.log(array[i]);
-    if (array[i] !== '' && typeof array[i] === 'string') {
-      HTML += `<i class ="fa fa-${array[i]}"></i>`;
-    }
+
+  for (let c = 0; c < size; c++) {
+    cellHTML += `<div class="cell" style="width: ${elementSize}%;"></div>`;
   }
-  selectorDOM.innerHTML = HTML;
+
+  for (let r = 0; r < size; r++) {
+    HTML += `<div class="row" style="height: ${elementSize}%;">${cellHTML}</div>`;
+  }
+
+  DOMelement.innerHTML = HTML;
 }
-
-const icons = ['facebook', 'twitter', 5, , 'linkedin'];
-
-generuotiSocials('.socials', icons);

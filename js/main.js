@@ -16,15 +16,23 @@ function renderBoard(DOMelement, size) {
   // const rowHTML = `<div class="row" style="height: ${elementSize}%;">${cellHTML}</div>`;
   // DOMelement.innerHTML = rowHTML.repeat(size);
 
-  let cellHTML = '';
+  let wbCellHTML = '';
+  let bbCellHTML = '';
   let HTML = '';
-
+  let bc = 'white';
+  let bcb = 'black';
   for (let c = 0; c < size; c++) {
-    cellHTML += `<div class="cell" style="width: ${elementSize}%;"></div>`;
+    wbCellHTML += `<div class="cell" style="width: ${elementSize}%; background-color: ${bc};"></div>`;
+    if (bc === 'white') {bc = 'black'} else { bc = 'white'};
   }
-
-  for (let r = 0; r < size; r++) {
+  for (let c = 0; c < size; c++) {
+    bbCellHTML += `<div class="cell" style="width: ${elementSize}%; background-color: ${bcb};"></div>`;
+    if (bcb === 'black') {bcb = 'white'} else { bcb = 'black'};
+  }
+  let cellHTML = wbCellHTML;
+  for (let r = 0; r < size; r++) {   
     HTML += `<div class="row" style="height: ${elementSize}%;">${cellHTML}</div>`;
+    if (cellHTML === wbCellHTML) {cellHTML = bbCellHTML} else {cellHTML = wbCellHTML}
   }
 
   DOMelement.innerHTML = HTML;

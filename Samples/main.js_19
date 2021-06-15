@@ -1,11 +1,11 @@
 function time(hours, interval) {
-  for (let i = 0; i < 24; i++) {
-    for (let j = 0; j < 4; j++) {
-      console.log(`${i}:${j * 15}`);
+  for (let h = 0; h < 24; h++) {
+    for (let m = 0; m < 60; m += 2) {
+      console.log(`${h}:${m}`);
     }
   }
 }
-time(24, 15);
+time(24, 1);
 
 /*
 j = 0  > 0 min

@@ -3,4 +3,4 @@ function tortoGabalas(tortuKiekis, zmoniuKiekis, tortoSvoris) {
   return Math.floor((tortoSvoris / zmoniuPerTorta) * 1000);
 }
 
-console.log(tortoGabalas(3, 4, 1)); // 166
+console.log(tortoGabalas(3, 17, 1)); // 166
